@@ -63,7 +63,7 @@ public class PictureServiceImpl implements PictureService {
             }
         }
         result.setError(0);
-        result.setUrl("/upload/" + newFileName + suffix);
+        result.setUrl("http://localhost:8080/upload/" + newFileName + suffix);
         return result;
     }
 }
