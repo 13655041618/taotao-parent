@@ -31,6 +31,8 @@
         <module name="taotao-pojo" />
         <module name="taotao-portal" />
         <module name="taotao-rest" />
+        <module name="taotao-search" />
+        <module name="taotao-serach" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -45,6 +47,8 @@
       <module name="taotao-pojo" target="1.7" />
       <module name="taotao-portal" target="1.8" />
       <module name="taotao-rest" target="1.8" />
+      <module name="taotao-search" target="1.8" />
+      <module name="taotao-serach" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

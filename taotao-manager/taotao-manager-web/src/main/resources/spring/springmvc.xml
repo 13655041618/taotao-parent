@@ -27,4 +27,6 @@
         <property name="defaultEncoding" value="utf-8"/>
         <property name="maxUploadSize" value="5242880"/>
     </bean>
+
+    <context:property-placeholder location="classpath:properties/resource.properties"/>
 </beans>
