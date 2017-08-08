@@ -2,6 +2,7 @@ package com.taotao.rest.component.impl;
 
 import com.taotao.rest.component.JedisClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
