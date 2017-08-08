@@ -1,5 +1,8 @@
 package com.taotao.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.taotao.common.pojo.EasyUIDataGridResult;
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.mapper.TbItemParamMapper;
 import com.taotao.pojo.TbItemParam;
@@ -44,4 +47,5 @@ public class ItemParamServiceImpl implements ItemParamService {
         itemParamMapper.insert(itemParam);
         return TaotaoResult.ok();
     }
+
 }

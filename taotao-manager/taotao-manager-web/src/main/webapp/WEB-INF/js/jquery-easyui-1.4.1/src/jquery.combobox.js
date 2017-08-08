@@ -305,7 +305,7 @@
 	}
 	
 	/**
-	 * create the component
+	 * create the com.taotao.sso.component
 	 */
 	function create(target){
 		var state = $.data(target, 'combobox');

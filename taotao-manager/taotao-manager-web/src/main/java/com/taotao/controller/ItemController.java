@@ -45,7 +45,6 @@ public class ItemController {
     @ResponseBody
     public EasyUIDataGridResult getItemCatList(Integer page, Integer rows) {
         EasyUIDataGridResult result = itemService.getItemParamList(page, rows);
-        System.out.println(result);
         return result;
     }
 

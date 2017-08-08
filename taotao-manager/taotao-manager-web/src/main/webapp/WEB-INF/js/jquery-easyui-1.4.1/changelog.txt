@@ -12,8 +12,8 @@ Version 1.4.1
  * datagrid: Calling 'endEdit' method will accept the editing value correctly.
  * datagrid: Add 'onBeforeSelect','onBeforeCheck','onBeforeUnselect','onBeforeUncheck' events.
  * propertygrid: The user can edit a row by calling 'beginEdit' method.
- * datebox: Add 'cloneFrom' method to create the datebox component quickly.
- * datetimebox: Add 'cloneFrom' method to create the datetimebox component quickly.
+ * datebox: Add 'cloneFrom' method to create the datebox com.taotao.sso.component quickly.
+ * datetimebox: Add 'cloneFrom' method to create the datetimebox com.taotao.sso.component quickly.
 
 Version 1.4
 -------------
@@ -40,7 +40,7 @@ Version 1.4
 * New Plugins
  * textbox: A enhanced input field that allows users build their form easily.
  * datetimespinner: A date and time spinner that allows to pick a specific day.
- * filebox: The filebox component represents a file field of the forms.
+ * filebox: The filebox com.taotao.sso.component represents a file field of the forms.
 
 Version 1.3.6
 -------------
@@ -48,7 +48,7 @@ Version 1.3.6
  * treegrid: The 'getChecked' method can not return correct checked rows. fixed.
  * tree: The checkbox does not display properly on async tree when 'onlyLeafCheck' property is true. fixed.
 * Improvement
- * treegrid: All the selecting and checking methods are extended from datagrid component.
+ * treegrid: All the selecting and checking methods are extended from datagrid com.taotao.sso.component.
  * linkbutton: The icon alignment is fully supported, possible values are: 'top','bottom','left','right'.
  * linkbutton: Add 'size' property, possible values are: 'small','large'.
  * linkbutton: Add 'onClick' event.
@@ -90,7 +90,7 @@ Version 1.3.5
  * accordion: Add 'unselect' method that will trigger 'onUnselect' event.
  * accordion: Add 'selected' and 'multiple' properties.
  * accordion: Add 'getSelections' method.
- * datebox: Add 'sharedCalendar' property that allows multiple datebox components share one calendar component.
+ * datebox: Add 'sharedCalendar' property that allows multiple datebox components share one calendar com.taotao.sso.component.
 
 Version 1.3.4
 -------------
@@ -309,7 +309,7 @@ Version 1.2.2
  * datagrid: Allow users to change row style in some conditions.
  * datagrid: Users can use the footer row to display summary information.
 * New Plugins
- * datetimebox: Combines datebox with timespinner component.
+ * datetimebox: Combines datebox with timespinner com.taotao.sso.component.
   
 Version 1.2.1
 -------------
@@ -339,8 +339,8 @@ Version 1.2
  * datagrid: Extend from panel, so many properties defined in panel can be used for datagrid.
 * New Plugins
  * treegrid: Represent tabular data in hierarchical view, combines tree view and datagrid.
- * combo: The basic component that allow user to extend their combo component such as combobox,combotree,etc.
- * combogrid: Combines combobox with drop-down datagrid component.
+ * combo: The basic com.taotao.sso.component that allow user to extend their combo com.taotao.sso.component such as combobox,combotree,etc.
+ * combogrid: Combines combobox with drop-down datagrid com.taotao.sso.component.
  * spinner: The basic plugin to create numberspinner,timespinner,etc.
  * numberspinner: The numberbox that allow user to change value by clicking up and down spin buttons.
  * timespinner: The time selector that allow user to quickly inc/dec a time.
@@ -363,7 +363,7 @@ Version 1.1.2
 Version 1.1.1
 -------------
 * Bug
- * form: Cannot clear the value of combobox and combotree component. fixed.
+ * form: Cannot clear the value of combobox and combotree com.taotao.sso.component. fixed.
 * Improvement
  * tree: Add some useful methods such as 'getRoot','getChildren','update',etc.
  * datagrid: Add editable feature, improve performance while loading data.
@@ -397,7 +397,7 @@ Version 1.0.5
  * panel: The fit property of panel performs incorrectly. fixed.
 * Improvement
  * menu: Add a href attribute for menu item, with which user can display a different page in the current browser window.
- * form: Add a validate method to do validation for validatebox component.
+ * form: Add a validate method to do validation for validatebox com.taotao.sso.component.
  * dialog: The dialog can read collapsible,minimizable,maximizable and resizable attribute from markup.
 * New Plugins
  * validatebox: A validation plugin that checks to make sure the user's input value is valid. 
@@ -428,6 +428,6 @@ Version 1.0.3
  * datagrid: Toolbar can accept a new property named 'disabled' to disable the specified tool button.
 * New Plugins
  * combobox: Combines a textbox with a list of options that users are able to choose from.
- * combotree: Combines combobox with drop-down tree component.
+ * combotree: Combines combobox with drop-down tree com.taotao.sso.component.
  * numberbox: Make input element can only enter number char.
  * dialog: rewrite the dialog plugin, dialog can contains toolbar and buttons.

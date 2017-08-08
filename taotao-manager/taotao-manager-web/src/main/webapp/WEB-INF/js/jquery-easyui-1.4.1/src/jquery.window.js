@@ -69,7 +69,7 @@
 		var opts = state.options;
 		var win = $(target).panel($.extend({}, state.options, {
 			border: false,
-			doSize: true,	// size the panel, the property undefined in window component
+			doSize: true,	// size the panel, the property undefined in window com.taotao.sso.component
 			closed: true,	// close the panel
 			cls: 'window',
 			headerCls: 'window-header',

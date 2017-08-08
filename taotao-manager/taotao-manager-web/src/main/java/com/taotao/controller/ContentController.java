@@ -1,5 +1,6 @@
 package com.taotao.controller;
 
+import com.taotao.common.pojo.EasyUIDataGridResult;
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.common.utils.HttpClientUtil;
 import com.taotao.pojo.TbContent;
@@ -32,5 +33,11 @@ public class ContentController {
         //调用taotao-rest发布的服务，同步缓存
         HttpClientUtil.doGet(REST_BASE_URL + RESET_CONTENT_SYNC_URL + content.getCategoryId());
         return result;
+    }
+
+    @RequestMapping("/query/list")
+    @ResponseBody
+    public EasyUIDataGridResult getQueryList(Integer page, Integer rows) {
+        return contentService.getContentList(page, rows);
     }
 }
