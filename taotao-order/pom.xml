@@ -57,4 +57,20 @@
             <artifactId>jedis</artifactId>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <port>8085</port>
+                    <path>/</path>
+                    <uriEncoding>UTF-8</uriEncoding>
+                    <finalName></finalName>
+                    <server>taotao-order</server>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
