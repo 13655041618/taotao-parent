@@ -1,5 +1,6 @@
 package com.taotao.portal.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.taotao.common.utils.HttpClientUtil;
 import com.taotao.mapper.TbItemCatMapper;
 import com.taotao.mapper.TbItemMapper;
@@ -27,10 +28,11 @@ public class ProductsServiceImpl implements ProductsService {
     @Autowired
     private TbItemCatMapper itemCatMapper;
     @Override
-    public List<PortalItem> getListByCid(Long cid) {
+    public List<PortalItem> getListByCid(Long cid,Integer page,Integer rows) {
         TbItemExample example = new TbItemExample();
         TbItemExample.Criteria criteria = example.createCriteria();
         criteria.andCidEqualTo(cid);
+        PageHelper.startPage(page,rows);
         List<TbItem> itemList = itemMapper.selectByExample(example);
         List<PortalItem> list = new ArrayList<>();
         if (itemList != null && itemList.size() > 0) {
@@ -47,7 +49,7 @@ public class ProductsServiceImpl implements ProductsService {
                 List<TbItemCat> itemCats = itemCatMapper.selectByExample(itemCatExample);
                 if (itemCats != null) {
                     for (TbItemCat cat : itemCats) {
-                        List<PortalItem> list1 = getListByCid(cat.getId());
+                        List<PortalItem> list1 = getListByCid(cat.getId(),page,rows);
                         list.addAll(list1);
                     }
                 }
@@ -60,6 +62,32 @@ public class ProductsServiceImpl implements ProductsService {
     public TbItemCat getItemNameByCid(Long cid) {
         TbItemCat item = itemCatMapper.selectByPrimaryKey(cid);
         return item;
+    }
+
+    @Override
+    public int totalPage(Long cid) {
+        int totalPage = 0;
+        TbItemExample example = new TbItemExample();
+        TbItemExample.Criteria criteria = example.createCriteria();
+        criteria.andCidEqualTo(cid);
+        List<TbItem> itemList = itemMapper.selectByExample(example);
+        totalPage += itemList.size();
+        if (itemList.size() == 0) {
+            TbItemCat itemCat = itemCatMapper.selectByPrimaryKey(cid);
+            if (itemCat != null) {
+                TbItemCatExample itemCatExample = new TbItemCatExample();
+                TbItemCatExample.Criteria itemCatExampleCriteria = itemCatExample.createCriteria();
+                itemCatExampleCriteria.andParentIdEqualTo(cid);
+                List<TbItemCat> itemCats = itemCatMapper.selectByExample(itemCatExample);
+                totalPage += itemCats.size();
+                if (itemCats != null) {
+                    for (TbItemCat cat : itemCats) {
+                        totalPage += totalPage(cat.getId());
+                    }
+                }
+            }
+        }
+        return totalPage;
     }
 
     public PortalItem Item2PortalItem(TbItem item) {

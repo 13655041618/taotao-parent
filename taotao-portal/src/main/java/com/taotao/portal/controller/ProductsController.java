@@ -24,9 +24,9 @@ public class ProductsController {
 
     @RequestMapping("/products/{cid}")
     public String search(@PathVariable Long cid, @RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "60") Integer rows, Model model) {
-        List<PortalItem> itemList = productsService.getListByCid(cid);
+        List<PortalItem> itemList = productsService.getListByCid(cid,page,rows);
         TbItemCat item = productsService.getItemNameByCid(cid);
-        int totalPage = (int) (itemList.size()/60 + 1);
+        int totalPage = productsService.totalPage(cid)/60;
         model.addAttribute("query", item.getName());
         model.addAttribute("totalPages", totalPage);
         model.addAttribute("itemList", itemList);
