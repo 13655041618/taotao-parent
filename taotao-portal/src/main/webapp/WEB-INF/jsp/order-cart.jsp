@@ -79,12 +79,12 @@
 						<b></b>
 						<div class="user-name">
 							<div class="fl">
-								<strong limit="4">入云龙</strong>&nbsp;&nbsp;收
+								<strong limit="4">测试支付</strong>&nbsp;&nbsp;收
 							</div>
-							<div class="fr">158****8888</div>
+							<div class="fr">123****8888</div>
 							<div class="clr"></div>
 						</div>
-						<div class="mt10" limit="15">北京 昌平区 五环外六环里</div>
+						<div class="mt10" limit="15">北京 xx区 xx路</div>
 						<div class="adr-m" limit="30">西三旗 xxxxxxxxx</div>
 						<div class="op-btns ar">
 							<a href="#none"

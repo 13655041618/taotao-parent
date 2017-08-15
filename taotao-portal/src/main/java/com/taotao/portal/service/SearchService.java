@@ -1,5 +1,6 @@
 package com.taotao.portal.service;
 
+import com.github.pagehelper.PageInfo;
 import com.taotao.common.pojo.EasyUIDataGridResult;
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.pojo.TbItem;
@@ -14,5 +15,7 @@ import java.util.List;
 public interface SearchService {
     SearchResult search(String keyword, Integer page, Integer rows);
 
-    List<PortalItem> searchItem(String keyword);
+    List<PortalItem> searchItem(String keyword, Integer page, Integer rows);
+
+    int totalPage(String keyword);
 }

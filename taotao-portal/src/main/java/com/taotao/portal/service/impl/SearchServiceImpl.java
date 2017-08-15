@@ -47,8 +47,10 @@ public class SearchServiceImpl implements SearchService {
     }
 
     @Override
-    public List<PortalItem> searchItem(String keyword) {
+    public List<PortalItem> searchItem(String keyword,Integer page,Integer rows) {
+        PageHelper.startPage(page,rows);
         List<TbItem> itemList = itemMapper.selectByTitleLike(keyword);
+        PageInfo<TbItem> pageInfo = new PageInfo<TbItem>(itemList);
         List<PortalItem> portalItemList = new ArrayList<PortalItem>();
         for (TbItem item:itemList) {
             PortalItem p = new PortalItem();
@@ -66,5 +68,11 @@ public class SearchServiceImpl implements SearchService {
             portalItemList.add(p);
         }
         return portalItemList;
+    }
+
+    @Override
+    public int totalPage(String keyword) {
+        List<TbItem> itemList = itemMapper.selectByTitleLike(keyword);
+        return itemList.size();
     }
 }

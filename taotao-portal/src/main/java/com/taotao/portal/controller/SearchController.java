@@ -59,9 +59,9 @@ public class SearchController {
             keyword = "";
             e.printStackTrace();
         }
-        List<PortalItem> itemList = searchService.searchItem(keyword);
+        List<PortalItem> itemList = searchService.searchItem(keyword,page,rows);
         //参数传递 给页面
-        int totalPage = (int) (itemList.size()/60 + 1);
+        int totalPage = searchService.totalPage(keyword)/60 + 1;
         model.addAttribute("query", keyword);
         model.addAttribute("totalPages", totalPage);
         model.addAttribute("itemList", itemList);
